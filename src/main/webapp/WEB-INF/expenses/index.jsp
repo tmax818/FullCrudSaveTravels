@@ -19,7 +19,7 @@
 </head>
 <body>
 <h1>All Expenses</h1>
-<table>
+<table class="table">
     <thead>
     <tr>
         <th>ID</th>
