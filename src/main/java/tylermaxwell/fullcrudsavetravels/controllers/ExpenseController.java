@@ -17,6 +17,11 @@ public class ExpenseController {
     @Autowired
     ExpenseService service;
 
+    @GetMapping("/")
+    public String home(){
+        return "redirect:/expenses/new";
+    }
+
     // CREATE
     @GetMapping("/expenses/new")
     public String newExpense(@ModelAttribute("expense")Expense expense){
