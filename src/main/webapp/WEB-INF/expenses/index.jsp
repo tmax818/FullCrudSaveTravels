@@ -30,7 +30,7 @@
     </tr>
     </thead>
     <tbody>
-    <c:forEach var="expense" items="${expenses}">
+    <c:forEach var="expense" items="${langauges}">
         <tr>
             <td><c:out value="${expense.id}"></c:out></td>
             <td>
