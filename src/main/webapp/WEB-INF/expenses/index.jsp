@@ -18,6 +18,8 @@
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
+<div class="container">
+
 <h1>All Expenses</h1>
 <table class="table">
     <thead>
@@ -30,7 +32,7 @@
     </tr>
     </thead>
     <tbody>
-    <c:forEach var="expense" items="${langauges}">
+    <c:forEach var="expense" items="${expenses}">
         <tr>
             <td><c:out value="${expense.id}"></c:out></td>
             <td>
@@ -55,29 +57,30 @@
 </table>
 
 <h1>New Expense</h1>
-<form:form action="/expenses" method="post" modelAttribute="expense">
-    <p>
+<form:form class="form" action="/expenses" method="post" modelAttribute="expense">
+    <div class="form-control">
         <form:label path="name">Name</form:label>
         <form:errors path="name"/>
         <form:input path="name"/>
-    </p>
-    <p>
+    </div>
+    <div class="form-control">
         <form:label path="vendor">Vendor</form:label>
         <form:errors path="vendor"/>
         <form:input path="vendor"/>
-    </p>
-    <p>
+    </div>
+    <div class="form-control">
         <form:label path="amount">Amount</form:label>
         <form:errors path="amount"/>
         <form:input type="number" path="amount"/>
-    </p>
-    <p>
+    </div>
+    <div class="form-control">
         <form:label path="description">Description</form:label>
         <form:errors path="description"/>
         <form:textarea path="description"/>
-    </p>
+    </div>
     <input type="submit" value="Submit"/>
 </form:form>
+</div>
 </body>
 </html>
 
